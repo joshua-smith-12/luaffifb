@@ -3527,6 +3527,7 @@ int luaopen_ffi(lua_State* L)
     assert(lua_gettop(L) == 0);
 
     /* ffi table */
+    luaL_register(L, "ffi", ffi_reg);
     lua_newtable(L);
     luaL_setfuncs(L, ffi_reg, 0);
 
