@@ -3529,7 +3529,6 @@ int luaopen_ffi(lua_State* L)
     /* ffi table */
     lua_newtable(L);
     luaL_setfuncs(L, ffi_reg, 0);
-    lua_setglobal(L, "ffi");
 
     /* setup_upvals(ffi tbl) */
     lua_pushcfunction(L, &setup_upvals);
