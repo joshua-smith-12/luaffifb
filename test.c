@@ -19,9 +19,6 @@
 #include <errno.h>
 #endif
 
-#include <complex.h>
-#define HAVE_COMPLEX
-
 #ifdef __cplusplus
 # define EXTERN_C extern "C"
 #else
