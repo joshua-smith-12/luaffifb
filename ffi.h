@@ -43,7 +43,6 @@ extern "C" {
 #endif
 
 #include <complex.h>
-#define HAVE_COMPLEX
 #define HAVE_LONG_DOUBLE
 
 #ifndef NDEBUG
