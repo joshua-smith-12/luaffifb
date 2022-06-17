@@ -3536,6 +3536,8 @@ int luaopen_ffi(lua_State* L)
     lua_call(L, 1, 0);
 
     assert(lua_gettop(L) == 1);
+    
+    luaL_register(L, "ffi", ffi_reg);
 
     lua_getglobal(L, "tonumber");
     lua_pushcclosure(L, &ffi_number, 1);
