@@ -3529,6 +3529,7 @@ int luaopen_ffi(lua_State* L)
     /* ffi table */
     lua_newtable(L);
     luaL_setfuncs(L, ffi_reg, 0);
+    lua_setglobal(L, "ffi");
 
     /* setup_upvals(ffi tbl) */
     lua_pushcfunction(L, &setup_upvals);
@@ -3536,8 +3537,6 @@ int luaopen_ffi(lua_State* L)
     lua_call(L, 1, 0);
 
     assert(lua_gettop(L) == 1);
-    
-    lua_setglobal(L, "ffi");
 
     lua_getglobal(L, "tonumber");
     lua_pushcclosure(L, &ffi_number, 1);
