@@ -42,9 +42,6 @@ extern "C" {
 #include <sys/mman.h>
 #endif
 
-#include <complex.h>
-#define HAVE_LONG_DOUBLE
-
 #ifndef NDEBUG
 #define DASM_CHECKS
 #endif
