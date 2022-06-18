@@ -35,7 +35,7 @@ static void SetLastError(int err)
 #define shred(p,s,e) memset((uint8_t*)(p)+(s),0xCC,(e)-(s))
 #endif
 
-
+#undef _WIN64
 #ifdef _WIN64
 #include "dynasm/dasm_x86.h"
 #include "call_x64win.h"
